@@ -814,20 +814,23 @@ nav.scrolled {
 }
 .sobremi-form-footer {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.sobremi-submit {
+  width: 100%;
+  justify-content: center;
 }
 .sobremi-form-links {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-left: auto;
 }
 .sobremi-form-note {
   font-size: 0.7rem;
   color: var(--ink-60);
   font-style: italic;
+  min-height: 1em;
 }
 
 .sobremi-links {
@@ -1321,6 +1324,7 @@ footer > .footer-logo-link { grid-area: logo; }
   .cons-header { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
   .styling-header { grid-template-columns: 1fr; }
+  .styling-tipos { grid-template-columns: 1fr; }
   .styling-grid { grid-template-columns: 1fr 1fr; }
   .styling-img--portrait, .styling-img--landscape, .styling-img--square { aspect-ratio: 1; }
   .styling-img--span2 { grid-column: span 1; }
@@ -1332,9 +1336,6 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   .sobremi-left { flex-direction: column; align-items: center; padding-top: 0; }
   .sobremi-photo { width: 180px; height: 180px; }
   .sobremi-form { max-width: 100%; }
-  .sobremi-form-footer { flex-wrap: nowrap; gap: 0.5rem; }
-  .sobremi-form-links { margin-left: 0; gap: 0.75rem; }
-  .sobremi-form-note { flex: 1; font-size: 0.65rem; }
 }
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#303030">
@@ -1371,8 +1372,8 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   </a>
   <div class="nav-links">
     <a href="#que-es" class="nav-link">Proyecto</a>
-    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
     <a href="#consultorias" class="nav-link">Servicios</a>
+    <a href="#sobre-mi" class="nav-link">Sobre mí</a>
     <a href="#instagram" class="nav-link">Instagram</a>
   </div>
   <div class="nav-right">
@@ -1384,8 +1385,8 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   <a href="#que-es" class="nav-mobile-link" onclick="closeMobileMenu()">Proyecto</a>
-  <a href="#sobre-mi" class="nav-mobile-link" onclick="closeMobileMenu()">Sobre mí</a>
   <a href="#consultorias" class="nav-mobile-link" onclick="closeMobileMenu()">Servicios</a>
+  <a href="#sobre-mi" class="nav-mobile-link" onclick="closeMobileMenu()">Sobre mí</a>
   <a href="#instagram" class="nav-mobile-link" onclick="closeMobileMenu()">Instagram</a>
 </div>
 
@@ -1401,7 +1402,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     <img src="uploads/aalb_logo_blanco@2x.png" alt="Amor a la Bebida" class="hero-center-logo reveal">
     <p class="hero-tagline reveal" style="transition-delay:.1s">Con el corazón.</p>
     <div class="hero-ctas reveal" style="transition-delay:.2s">
-      <a href="mailto:amoralabebida@gmail.com" class="btn btn-gold">Hablemos</a>
+      <a href="#sobre-mi" class="btn btn-gold">Hablemos</a>
       <a href="https://instagram.com/amoralabebida" target="_blank" class="btn btn-ghost">Instagram</a>
     </div>
   </div>
@@ -1490,7 +1491,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     </div>
   </div>
   <div class="cons-footer reveal" style="transition-delay:.15s">
-    <a href="mailto:amoralabebida@gmail.com" class="btn btn-gold">Hablemos</a>
+    <a href="#sobre-mi" class="btn btn-gold">Hablemos</a>
     <a href="https://instagram.com/amoralabebida" target="_blank" class="btn btn-ghost">Instagram</a>
     <span class="cons-note">Respondó en menos de 8 hrs (tal vez)</span>
   </div>
@@ -1576,7 +1577,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
           <textarea name="message" class="sobremi-input sobremi-textarea" placeholder="¿De qué querés hablar?" required id="contacto-msg"></textarea>
         </div>
         <div class="sobremi-form-footer">
-          <button type="submit" class="btn btn-ink">Enviar</button>
+          <button type="submit" class="btn btn-ink sobremi-submit">Enviar</button>
           <span class="sobremi-form-note" id="contacto-feedback"></span>
           <div class="sobremi-form-links">
             <a href="https://instagram.com/amoralabebida" target="_blank" class="sobremi-link">
