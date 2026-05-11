@@ -1267,55 +1267,6 @@ footer > .footer-logo-link { grid-area: logo; }
   transition: opacity 0.2s;
 }
 .footer-logo-link:hover .footer-logo-img { opacity: 1; }
-
-/* ── INSTAGRAM ──────────────────────────────────────────────── */
-#instagram {
-  padding: clamp(2.5rem, 5vw, 4rem) var(--mx);
-}
-.ig-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.ig-title {
-  font-family: var(--display-36);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  color: var(--plum-dark);
-}
-.ig-handle {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-60);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.2s;
-}
-.ig-handle:hover { color: var(--ink); }
-.ig-grid {
-  display: flex;
-  justify-content: center;
-}
-/* override estilos inline de Instagram */
-.ig-grid .instagram-media {
-  margin: 0 !important;
-  max-width: 480px !important;
-  min-width: 0 !important;
-  width: 100% !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border: 1px solid var(--ink-20) !important;
-}
-@media (max-width: 540px) {
-  .ig-grid { grid-template-columns: 1fr; }
-}
 @media (max-width: 820px) {
   .nav-links { display: none; }
   .nav-ig { display: none; }
@@ -1377,7 +1328,6 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     <a href="#que-es" class="nav-link">Proyecto</a>
     <a href="#consultorias" class="nav-link">Servicios</a>
     <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-    <a href="#instagram" class="nav-link">Instagram</a>
   </div>
   <div class="nav-right">
     <a href="https://instagram.com/amoralabebida" target="_blank" class="nav-ig">amoralabebida</a>
@@ -1390,7 +1340,6 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   <a href="#que-es" class="nav-mobile-link" onclick="closeMobileMenu()">Proyecto</a>
   <a href="#consultorias" class="nav-mobile-link" onclick="closeMobileMenu()">Servicios</a>
   <a href="#sobre-mi" class="nav-mobile-link" onclick="closeMobileMenu()">Sobre mí</a>
-  <a href="#instagram" class="nav-mobile-link" onclick="closeMobileMenu()">Instagram</a>
 </div>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -1599,20 +1548,6 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
 </section>
 
 
-<!-- ═══════════════════ INSTAGRAM ═══════════════════ -->
-<section id="instagram">
-  <div class="ig-header reveal">
-    <h2 class="ig-title">Último contenido</h2>
-    <a href="https://instagram.com/amoralabebida" target="_blank" class="ig-handle">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      @amoralabebida
-    </a>
-  </div>
-  <div class="ig-grid reveal" style="transition-delay:.1s">
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DR2L-FoDnII/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"><div style="padding:16px"><a href="https://www.instagram.com/p/DR2L-FoDnII/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> </a></div></blockquote>
-  </div>
-</section>
-<script async src="//www.instagram.com/embed.js"></script>
 
 <!-- FOOTER -->
 <footer>
