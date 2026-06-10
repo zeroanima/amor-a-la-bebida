@@ -7,7 +7,10 @@
 <meta name="description" content="Amor a la Bebida es un proyecto sobre cocteles, destilados y cultura de barra desde San José, Costa Rica. Consultoría, contenido y comunidad por Chuz.">
 <meta property="og:title" content="Amor a la Bebida">
 <meta property="og:description" content="Cocteles, destilados y cultura de barra desde Costa Rica.">
-<meta property="og:image" content="uploads/7T8A0243-2.jpg">
+<meta property="og:image" content="https://amoralabebida.com/uploads/7T8A0243-2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1800">
+<link rel="canonical" href="https://amoralabebida.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amoralabebida.com">
 <meta name="twitter:card" content="summary_large_image">
@@ -140,8 +143,8 @@
   --plum-light:   #8d7c99;
 
   /* Whisky añejo (gold) */
-  --gold-dark:    #b28d52;
-  --gold-mid:     #dbbe8f;
+  --gold-dark:    #3a7a8f;
+  --gold-mid:     #7db7cc;
   --gold-light:   #f0e4cc;
 
   /* Azul pizarra (slate blue) */
@@ -262,6 +265,7 @@ nav.scrolled {
 
 /* ── HERO ──────────────────────────────────────────────────── */
 #hero {
+  background: var(--carbon-dark);
   position: relative;
   min-height: 100svh;
   display: flex;
@@ -956,59 +960,6 @@ footer > .footer-logo-link { grid-area: logo; }
 }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ── TWEAKS ──────────────────────────────────────────────────── */
-#tweaks-panel {
-  display: none;
-  position: fixed;
-  bottom: 1.5rem; right: 1.5rem;
-  z-index: 999;
-  background: var(--bg);
-  border: 1px solid var(--ink-20);
-  padding: 1.5rem;
-  width: 270px;
-  box-shadow: 0 8px 48px rgba(60,44,68,0.15);
-}
-#tweaks-panel.visible { display: block; }
-.tweaks-title {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--ink-60);
-  margin-bottom: 1.25rem;
-}
-.tweak-row { margin-bottom: 1.1rem; }
-.tweak-label {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-60);
-  margin-bottom: 0.4rem;
-  font-weight: 500;
-}
-.tweak-options { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.tweak-btn {
-  font-size: 0.7rem;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--ink-20);
-  cursor: pointer;
-  background: transparent;
-  font-family: var(--sans);
-  color: var(--ink);
-  transition: background 0.15s, color 0.15s;
-}
-.tweak-btn.active, .tweak-btn:hover { background: var(--ink); color: var(--carbon-light); border-color: var(--ink); }
-.tweak-swatches { display: flex; gap: 0.5rem; margin-top: 0.25rem; }
-.swatch {
-  width: 24px; height: 24px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: border-color 0.15s;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-.swatch.active { outline-color: var(--ink); }
 
 /* ── STYLING ─────────────────────────────────────────────────── */
 #styling {
@@ -1316,6 +1267,35 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     <circle cx="400" cy="460" r="6" fill="#b28d52" opacity="0.6"/>
   </svg>
 </template>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Amor a la Bebida",
+  "url": "https://amoralabebida.com",
+  "image": "https://amoralabebida.com/uploads/7T8A0243-2.jpg",
+  "logo": "https://amoralabebida.com/uploads/aalb_logo_negro@2x.png",
+  "description": "Proyecto sobre cocteles, destilados y cultura de barra desde San José, Costa Rica. Consultoría en cartas de cocteles, talleres privados y asesoría para aperturas de bares.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San José",
+    "addressCountry": "CR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Chuz",
+    "sameAs": "https://instagram.com/amoralabebida"
+  },
+  "sameAs": ["https://instagram.com/amoralabebida"],
+  "email": "amoralabebida@gmail.com",
+  "knowsAbout": ["Coctelería", "Destilados", "Cultura de barra", "Diseño de cartas de cocteles"],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diseño de carta de cocteles"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Talleres privados de coctelería"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Asesoría para aperturas de bares"}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1346,7 +1326,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
 <section id="hero">
   <!-- bg photo -->
   <div class="hero-bg-photo" aria-hidden="true">
-    <img src="uploads/chuz_amorbebida-280b.jpg" alt="">
+    <img src="uploads/chuz_amorbebida-280b.jpg" alt="" fetchpriority="high">
   </div>
 
   <!-- centered logo + tagline + CTAs -->
@@ -1379,7 +1359,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   <div class="quees-grid">
     <div class="reveal">
       <div class="quees-photo-wrap">
-        <img src="uploads/2020-09-17-040614629.jpeg" alt="Coctelería" class="quees-photo">
+        <img loading="lazy" decoding="async" src="uploads/2020-09-17-040614629.jpeg" alt="Preparando un coctel en casa" class="quees-photo">
       </div>
       <p class="quees-intro-text">Amor a la bebida nace en el 2020 en plena pandemia, porque quería un lugar donde guardar todo lo que iba aprendiendo sobre la bebida. Y ahora estamos acá.</p>
     </div>
@@ -1421,21 +1401,21 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   <div class="cons-rule"></div>
   <div class="cards-grid reveal" style="transition-delay:.1s">
     <div class="card">
-      <div class="card-illo"><img src="uploads/IL_Caramelofashion_white@2x.png" alt="Old Fashioned"></div>
+      <div class="card-illo"><img loading="lazy" decoding="async" src="uploads/IL_Caramelofashion_white@2x.png" alt="Old Fashioned"></div>
       <span class="card-num">01</span>
       <h3 class="card-title">Diseño de carta de cocteles</h3>
       <p class="card-desc">Para bares, restaurantes y eventos que quieren una carta de cocteles pensada, no genérica.</p>
       <span class="card-tag">Bares · Restaurantes · Eventos</span>
     </div>
     <div class="card">
-      <div class="card-illo"><img src="uploads/IL_Montansuz_white@2x.png" alt="Highball"></div>
+      <div class="card-illo"><img loading="lazy" decoding="async" src="uploads/IL_Montansuz_white@2x.png" alt="Highball"></div>
       <span class="card-num">02</span>
       <h3 class="card-title">Talleres privados</h3>
       <p class="card-desc">Sesiones para grupos que quieren aprender a preparar cocteles en casa. Se aprende haciendo, no viendo.</p>
       <span class="card-tag">Grupos · Casa · Corporativo</span>
     </div>
     <div class="card">
-      <div class="card-illo"><img src="uploads/IL_rubisensual_white@2x.png" alt="Copa" style="opacity: 1"></div>
+      <div class="card-illo"><img loading="lazy" decoding="async" src="uploads/IL_rubisensual_white@2x.png" alt="Copa" style="opacity: 1"></div>
       <span class="card-num">03</span>
       <h3 class="card-title">Asesoría para aperturas</h3>
       <p class="card-desc">Para quienes están montando un bar y necesitan un ojo externo en carta, equipamiento o concepto de barra.</p>
@@ -1493,11 +1473,11 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   <!-- BLOQUE 3: fotos 1800 — más grandes sin las de cocteles -->
   <div class="styling-grid reveal" style="transition-delay:.2s; grid-template-columns: 1fr 1fr;">
     <div class="styling-img styling-img--square">
-      <img src="uploads/1800-MAY-JUNE8862-2.png" alt="Styling 1800 Coconut">
+      <img loading="lazy" decoding="async" src="uploads/1800-MAY-JUNE8862-2.jpg" alt="Styling 1800 Coconut">
       <div class="styling-caption">1800 Coconut — poolside</div>
     </div>
     <div class="styling-img styling-img--square">
-      <img src="uploads/DSC09973.png" alt="1800 Blanco Espresso Martini">
+      <img loading="lazy" decoding="async" src="uploads/DSC09973.jpg" alt="1800 Blanco Espresso Martini">
       <div class="styling-caption">1800 Blanco — Espresso Martini</div>
     </div>
   </div>
@@ -1510,7 +1490,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   <div class="sobremi-grid">
     <div class="sobremi-left reveal">
       <div class="sobremi-photo">
-        <img src="uploads/chuz_amorbebida-118.jpg" alt="Chuz" class="sobremi-photo-img">
+        <img loading="lazy" decoding="async" src="uploads/chuz_amorbebida-118.jpg" alt="Chuz" class="sobremi-photo-img">
       </div>
       <div class="sobremi-bar"></div>
     </div>
@@ -1552,7 +1532,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
 <!-- FOOTER -->
 <footer>
   <a href="#hero" class="footer-logo-link">
-    <img src="uploads/aalb_logo_negro@2x.png" alt="Amor a la Bebida" class="footer-logo-img">
+    <img loading="lazy" decoding="async" src="uploads/aalb_logo_negro@2x.png" alt="Amor a la Bebida" class="footer-logo-img">
   </a>
   <span class="footer-mid">© 2026</span>
   <div class="footer-links">
@@ -1561,92 +1541,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
   </div>
 </footer>
 
-<!-- TWEAKS PANEL -->
-<div id="tweaks-panel">
-  <p class="tweaks-title">Tweaks</p>
-
-  <div class="tweak-row">
-    <p class="tweak-label">Tagline</p>
-    <div class="tweak-options">
-      <button class="tweak-btn active" onclick="setTagline(0)">01</button>
-      <button class="tweak-btn" onclick="setTagline(1)">02</button>
-      <button class="tweak-btn" onclick="setTagline(2)">03</button>
-    </div>
-  </div>
-
-
-</div>
-
 <script>
-/* ── STATE ─────────────────────────────────── */
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "tagline": 2,
-  "accent": "slate",
-  "heroBg": "carbon",
-  "consulBg": "plum"
-}/*EDITMODE-END*/;
-
-let S = { ...TWEAK_DEFAULTS };
-
-/* ── TAGLINE ───────────────────────────────── */
-function setTagline(i) {
-  S.tagline = i;
-  document.querySelectorAll('#taglines li').forEach((li, j) => li.classList.toggle('active', i === j));
-  document.querySelectorAll('.tweak-options')[0]?.querySelectorAll('.tweak-btn')
-    .forEach((b, j) => b.classList.toggle('active', i === j));
-  save({ tagline: i });
-}
-
-/* ── ACCENT ────────────────────────────────── */
-const accentMap = {
-  gold:  { dark: '#b28d52', light: '#dbbe8f' },
-  slate: { dark: '#3a7a8f', light: '#7db7cc' },
-  wine:  { dark: '#732525', light: '#ad5e5e' },
-};
-function setAccent(name) {
-  S.accent = name;
-  const r = document.documentElement.style;
-  r.setProperty('--gold-dark', accentMap[name].dark);
-  r.setProperty('--gold-mid',  accentMap[name].light);
-  document.querySelectorAll('.swatch').forEach(s => s.classList.toggle('active', s.title === name));
-  save({ accent: name });
-}
-
-/* ── HERO BG ───────────────────────────────── */
-const heroBgMap = { plum: '#3c2c44', carbon: '#303030', wine: '#732525' };
-function setHero(name) {
-  S.heroBg = name;
-  document.getElementById('hero').style.background = heroBgMap[name];
-  document.querySelectorAll('.tweak-options')[1]?.querySelectorAll('.tweak-btn')
-    .forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase().includes(name === 'plum' ? 'ciruela' : name === 'carbon' ? 'carbón' : 'vino')));
-  save({ heroBg: name });
-}
-
-/* ── CONSUL BG ─────────────────────────────── */
-function setConsulBg(name) {
-  S.consulBg = name;
-  document.getElementById('consultorias').style.background = heroBgMap[name];
-  document.querySelectorAll('.tweak-options')[2]?.querySelectorAll('.tweak-btn')
-    .forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase().includes(name === 'plum' ? 'ciruela' : name === 'carbon' ? 'carbón' : 'vino')));
-  save({ consulBg: name });
-}
-
-function save(edits) {
-  window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
-}
-
-/* ── APPLY SAVED ───────────────────────────── */
-setTagline(S.tagline);
-setAccent('slate');
-setHero('carbon');
-setConsulBg('plum');
-
-/* ── TWEAKS TOGGLE ─────────────────────────── */
-window.addEventListener('message', e => {
-  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').classList.add('visible');
-  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('visible');
-});
-window.parent.postMessage({ type: '__edit_mode_available' }, '*');
 
 /* ── CONTACTO ──────────────────────────────── */
 function handleContacto(e) {
