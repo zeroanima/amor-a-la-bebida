@@ -12,6 +12,8 @@
 <meta property="og:image:height" content="1800">
 <link rel="canonical" href="https://amoralabebida.com/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="es_CR">
+<meta name="theme-color" content="#303030">
 <meta property="og:url" content="https://amoralabebida.com">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="uploads/aalb_favicon.png">
@@ -691,6 +693,18 @@ nav.scrolled {
   color: rgba(234,234,234,0.3);
   letter-spacing: 0.05em;
 }
+.cons-clients {
+  margin-top: 2.5rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(234,234,234,0.35);
+  line-height: 2;
+}
+.cons-clients strong {
+  font-weight: 600;
+  color: rgba(234,234,234,0.55);
+}
 
 /* ── SOBRE MÍ ────────────────────────────────────────────────── */
 #sobre-mi {
@@ -959,6 +973,10 @@ footer > .footer-logo-link { grid-area: logo; }
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
 .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 
 /* ── STYLING ─────────────────────────────────────────────────── */
@@ -1334,7 +1352,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     <img src="uploads/aalb_logo_blanco@2x.png" alt="Amor a la Bebida" class="hero-center-logo reveal">
     <p class="hero-tagline reveal" style="transition-delay:.1s">Con el corazón.</p>
     <div class="hero-ctas reveal" style="transition-delay:.2s">
-      <a href="#sobre-mi" class="btn btn-gold">Hablemos</a>
+      <a href="#contacto" class="btn btn-gold">Hablemos</a>
       <a href="https://instagram.com/amoralabebida" target="_blank" class="btn btn-ghost">Instagram</a>
     </div>
   </div>
@@ -1423,10 +1441,11 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
     </div>
   </div>
   <div class="cons-footer reveal" style="transition-delay:.15s">
-    <a href="#sobre-mi" class="btn btn-gold">Hablemos</a>
+    <a href="#contacto" class="btn btn-gold">Hablemos</a>
     <a href="https://instagram.com/amoralabebida" target="_blank" class="btn btn-ghost">Instagram</a>
     <span class="cons-note">Respondo en menos de 8 hrs (tal vez)</span>
   </div>
+  <p class="cons-clients reveal" style="transition-delay:.2s"><strong>Marcas con las que he trabajado</strong> — Tequila 1800 · Coca-Cola Co. · Automercado · Vindi · Collective Arts · Locoto Imports</p>
 </section>
 
 <!-- ═══════════════════ STYLING ═══════════════════ -->
@@ -1498,7 +1517,7 @@ footer { grid-template-columns: 1fr; grid-template-areas: "logo" "links" "copy";
       <p class="section-label">Sobre mí</p>
       <h2 class="sobremi-name">Soy<br><em>Chuz.</em></h2>
       <p class="sobremi-bio">Soy de San José y me gusta tomar bien. Empecé esto en 2020 porque quería un lugar donde guardar y compartir lo que iba aprendiendo — cócteles, destilados, barras que vale la pena visitar, cosas que me llamaban la atención. No soy bartender de profesión, soy curioso y disfruto aprender de cosas nuevas. Me gusta conocer gente, preguntar, probar, equivocarme. Si tenés alguna duda o querés hablar sobre la bebida, escribime, con gusto hablamos.</p>
-      <form class="sobremi-form reveal" style="transition-delay:.18s" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleContacto(event)">
+      <form id="contacto" class="sobremi-form reveal" style="transition-delay:.18s; scroll-margin-top: 6rem" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleContacto(event)">
         <input type="hidden" name="form-name" value="contacto">
         <input type="hidden" name="bot-field" style="display:none">
         <p class="sobremi-form-label">Escribime</p>
